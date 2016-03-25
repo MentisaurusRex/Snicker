@@ -16,6 +16,9 @@ namespace Snicker {
 
 	void IMainGame::run() {
 		if (!init()) return;
+
+		Snicker::Music music = m_audioEngine.loadMusic("Source/Sounds/west-winds.ogg");
+		//music.play(-1);
 	
 		FPSLimiter limiter;
 		limiter.setMaxFPS(60.0f);
@@ -61,6 +64,7 @@ namespace Snicker {
 
 	bool IMainGame::initSystems() {
 		m_window.create("Snide", 1024, 786, 0);
+		m_audioEngine.init();
 		return true;
 	}
 

@@ -3,6 +3,7 @@
 #include "Snicker.h"
 #include "Window.h"
 #include "InputManager.h"
+#include "AudioEngine.h"
 
 namespace Snicker {
 
@@ -41,6 +42,7 @@ namespace Snicker {
 		bool m_isRunning = false;
 		float m_fps = 0;
 		Window m_window;
+		AudioEngine m_audioEngine;
 		
 	};
 }
